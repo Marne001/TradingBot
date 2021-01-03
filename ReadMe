@@ -1,0 +1,16 @@
+wss://stream.binance.com:9443
+
+GET DATA WITH A WEB SOCKET
+
+Btc
+wss://stream.binance.com:9443/ws/btcusdt@trade
+wss://stream.binance.com:9443/ws/btcusdt@kline_5m
+
+Zilusdt
+wss://stream.binance.com:9443/ws/zilusdt@trade
+wss://stream.binance.com:9443/ws/zilusdt@kline_5m
+wscat -c wss://stream.binance.com:9443/ws/zilusdt@kline_5m | tee dataset.txt (Also print to file)
+
+< {"e":"trade","E":1609349788931,"s":"ZILUSDT","t":11540553,"p":"0.07805000","q":"1281.00000000","b":126706823,"a":126706839,"T":1609349788931,"m":true,"M":true}
+< {"e":"kline","E":1609350367754,"s":"ZILUSDT","k":{"t":1609350300000,"T":1609350599999,"s":"ZILUSDT","i":"5m","f":11544183,"L":11544534,"o":"0.07657000","c":"0.07694000","h":"0.07800000","l":"0.07650000","v":"1758868.80000000","n":352,"x":false,"q":"135665.48177600","V":"1472791.40000000","Q":"113659.63244900","B":"0"}}
+
